@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>نابيكس لتقنية المعلومات</title>
+<meta name="description" content="نابيكس شركة تقنية سعودية من جدة تبني منتجات ذكاء اصطناعي تتكلم بلهجتنا. أول منتجاتنا فزعة.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate" hreflang="en" href="https://nabix.sa/en/">
+<link rel="alternate" hreflang="ar" href="https://nabix.sa/">
+<link rel="canonical" href="https://nabix.sa/">
+<meta property="og:title" content="نابيكس لتقنية المعلومات">
+<meta property="og:description" content="منتجات ذكاء اصطناعي تتكلم بلهجتنا. أولها فزعة.">
+<meta property="og:url" content="https://nabix.sa/">
+<meta name="theme-color" content="#05090B">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Readex+Pro:wght@300..700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#05090B; --bg2:#0A1316; --card:rgba(255,255,255,.035); --ink:#EAF3F2; --muted:#8EA4A3; --dim:#5D7272;
+  --line:rgba(255,255,255,.09); --teal:#19C9B6; --teal-d:#0E7F74; --brass:#F2B544; --fazaa:#FF3D52;
+  --font:"Geist","Readex Pro",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --ease:cubic-bezier(.23,1,.32,1);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+img,svg,canvas{display:block;max-width:100%}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:max(20px,env(safe-area-inset-left,0px))}
+:focus-visible{outline:2px solid var(--teal);outline-offset:3px;border-radius:8px}
+.num{font-family:"Geist",system-ui,sans-serif;direction:ltr;unicode-bidi:isolate}
+
+/* ---------- header ---------- */
+header{position:fixed;inset:0 0 auto;z-index:20;padding-top:env(safe-area-inset-top,0px);transition:background .3s var(--ease),border-color .3s}
+header.scrolled{background:rgba(5,9,11,.72);backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none}
+.brand svg{width:32px;height:32px}
+.brand b{font-weight:600;font-size:21px;letter-spacing:-.01em}
+nav{display:flex;align-items:center;gap:6px;font-size:15px}
+nav a{text-decoration:none;color:var(--muted);padding:8px 14px;border-radius:999px;transition:color .2s,background .2s}
+nav a:hover{color:var(--ink);background:rgba(255,255,255,.05)}
+nav .lang{border:1px solid var(--line);color:var(--ink);font-family:"Geist",sans-serif}
+@media (max-width:700px){nav a:not(.lang){display:none}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;display:grid;place-items:center;overflow:hidden;isolation:isolate}
+#field{position:absolute;inset:0;width:100%;height:100%;z-index:-2}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(55% 45% at 50% 45%,rgba(5,9,11,.78) 0,rgba(5,9,11,.35) 55%,rgba(5,9,11,.2) 75%,var(--bg) 100%),
+             linear-gradient(to bottom,transparent 70%,var(--bg))}
+.hero-in{text-align:center;padding:120px 0 80px;max-width:920px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:14px;color:var(--muted);border:1px solid var(--line);background:rgba(255,255,255,.03);padding:6px 14px 6px 8px;border-radius:999px;margin-bottom:26px;backdrop-filter:blur(6px)}
+.eyebrow i{width:8px;height:8px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 0 rgba(25,201,182,.6);animation:ping 2.4s infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(25,201,182,.55)}70%{box-shadow:0 0 0 10px rgba(25,201,182,0)}100%{box-shadow:0 0 0 0 rgba(25,201,182,0)}}
+h1{font-weight:650;font-size:clamp(44px,8.4vw,104px);line-height:1.08;letter-spacing:-.025em;margin:0 0 22px;text-wrap:balance}
+h1 .glow{background:linear-gradient(100deg,#fff 0%,#BFF7EF 35%,var(--teal) 60%,var(--brass) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;background-size:200% 100%;animation:sheen 9s var(--ease) infinite alternate}
+@keyframes sheen{to{background-position:100% 0}}
+.lead{font-size:clamp(17px,2vw,21px);color:var(--muted);max-width:40em;margin:0 auto 38px;font-weight:350}
+
+/* ask console */
+.ask{position:relative;max-width:720px;margin:0 auto;text-align:start;border-radius:22px;padding:1px;
+  background:conic-gradient(from var(--a,0deg),rgba(25,201,182,.0),rgba(25,201,182,.9),rgba(242,181,68,.8),rgba(25,201,182,.0) 40%);animation:spin 6s linear infinite}
+@property --a{syntax:"<angle>";inherits:false;initial-value:0deg}
+@keyframes spin{to{--a:360deg}}
+.ask-in{border-radius:21px;background:rgba(8,15,18,.88);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);padding:16px}
+.ask-log{max-height:300px;overflow:auto;display:flex;flex-direction:column;gap:10px;padding:4px 4px 0;scrollbar-width:thin}
+.ask-log:empty{display:none}
+.msg{max-width:88%;padding:10px 14px;border-radius:16px;font-size:16px;line-height:1.7;white-space:pre-wrap;word-break:break-word}
+.msg.me{align-self:flex-end;background:rgba(255,255,255,.07);border-end-end-radius:6px}
+.msg.ai{align-self:flex-start;background:linear-gradient(135deg,rgba(25,201,182,.14),rgba(25,201,182,.04));border:1px solid rgba(25,201,182,.22);border-end-start-radius:6px}
+.msg.ai a{color:var(--teal)}
+.caret{display:inline-block;width:8px;height:1.1em;vertical-align:-.15em;background:var(--teal);margin-inline-start:2px;animation:blink 1s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
+.ask-row{display:flex;align-items:center;gap:10px;margin-top:10px}
+.ask-row .spark{flex:none;width:36px;height:36px;border-radius:11px;display:grid;place-items:center;background:rgba(25,201,182,.12)}
+.ask input{flex:1;min-width:0;background:transparent;border:0;outline:0;color:var(--ink);font:inherit;font-size:18px;padding:10px 4px}
+.ask input::placeholder{color:var(--dim)}
+.ask button.send{flex:none;width:44px;height:44px;border:0;border-radius:13px;background:var(--ink);color:var(--bg);display:grid;place-items:center;cursor:pointer;transition:transform .16s var(--ease),opacity .2s}
+.ask button.send:active{transform:scale(.94)}
+.ask button.send:disabled{opacity:.35;cursor:default}
+[dir=rtl] .ask button.send svg{transform:scaleX(-1)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.chips button{font:inherit;font-size:14px;color:var(--muted);background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:999px;padding:6px 14px;cursor:pointer;transition:color .2s,border-color .2s,background .2s}
+.chips button:hover{color:var(--ink);border-color:rgba(25,201,182,.45);background:rgba(25,201,182,.08)}
+.ask-note{font-size:12.5px;color:var(--dim);margin:10px 4px 0}
+.scroll-cue{position:absolute;bottom:26px;inset-inline:0;margin:auto;width:24px;height:38px;border:1.5px solid var(--line);border-radius:14px}
+.scroll-cue::after{content:"";position:absolute;top:7px;inset-inline:0;margin:auto;width:3px;height:8px;border-radius:2px;background:var(--muted);animation:cue 1.8s var(--ease) infinite}
+@keyframes cue{0%{transform:translateY(0);opacity:1}80%{transform:translateY(12px);opacity:0}100%{opacity:0}}
+
+/* ---------- sections ---------- */
+section{padding-block:clamp(72px,10vw,130px);position:relative}
+.kicker{color:var(--teal);font-size:15px;font-weight:500;margin:0 0 10px}
+h2{font-weight:620;font-size:clamp(34px,5vw,60px);line-height:1.12;letter-spacing:-.02em;margin:0 0 16px;text-wrap:balance}
+.sub{color:var(--muted);max-width:36em;margin:0 0 48px;font-size:18px}
+
+/* bento */
+.bento{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:minmax(150px,auto);gap:16px}
+.tile{position:relative;overflow:hidden;border-radius:24px;border:1px solid var(--line);background:var(--card);padding:28px;min-width:0;isolation:isolate}
+.tile::before{content:"";position:absolute;inset:0;z-index:-1;opacity:0;transition:opacity .35s;
+  background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),rgba(25,201,182,.13),transparent 60%)}
+.tile:hover::before{opacity:1}
+.tile h3{font-weight:600;font-size:28px;letter-spacing:-.015em;margin:0 0 8px;line-height:1.25}
+.tile p{margin:0;color:var(--muted)}
+.tag{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:500;padding:4px 11px;border-radius:999px;margin-bottom:16px}
+.tag.live{color:#7EF0C0;background:rgba(56,214,146,.1);border:1px solid rgba(56,214,146,.25)}
+.tag.live::before{content:"";width:6px;height:6px;border-radius:50%;background:#38D692}
+.tag.dev{color:var(--brass);background:rgba(242,181,68,.08);border:1px solid rgba(242,181,68,.25)}
+.t-fazaa{grid-column:span 4;grid-row:span 4;display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;
+  background:radial-gradient(120% 90% at 0% 100%,rgba(255,61,82,.16),transparent 55%),var(--card)}
+.t-homes{grid-column:span 2;grid-row:span 2}
+.t-agents{grid-column:span 2;grid-row:span 2}
+.t-soon{grid-column:span 4;grid-row:span 1;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;border-style:dashed}
+.t-why{grid-column:span 2;grid-row:span 1}
+@media (max-width:960px){.t-fazaa{grid-column:span 6;grid-template-columns:1fr}.t-homes,.t-agents{grid-column:span 3}.t-soon{grid-column:span 6}.t-why{grid-column:span 6}}
+@media (max-width:640px){.t-homes,.t-agents{grid-column:span 6}}
+.fz-head{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.fz-head img{width:56px;height:56px;border-radius:15px;box-shadow:0 10px 30px rgba(255,61,82,.35)}
+.fz-list{list-style:none;padding:0;margin:18px 0 24px;display:grid;gap:8px}
+.fz-list li{display:flex;gap:10px;color:var(--ink);font-size:16px}
+.fz-list li::before{content:"";flex:none;width:6px;height:6px;margin-top:.75em;border-radius:50%;background:var(--fazaa)}
+.go{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:550;padding:12px 20px;border-radius:14px;background:var(--ink);color:var(--bg);transition:transform .16s var(--ease)}
+.go:active{transform:scale(.97)}
+.go.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+/* phone mock */
+.phone{justify-self:center;width:min(270px,100%);aspect-ratio:9/18.5;border-radius:38px;padding:10px;background:linear-gradient(160deg,#1b2427,#0b1113);border:1px solid rgba(255,255,255,.12);box-shadow:0 30px 80px rgba(0,0,0,.55),inset 0 0 0 1px rgba(255,255,255,.04)}
+.screen{position:relative;height:100%;border-radius:30px;background:#0b0f10;overflow:hidden;display:flex;flex-direction:column}
+.screen .top{display:flex;align-items:center;gap:8px;padding:16px 14px 10px;border-bottom:1px solid rgba(255,255,255,.06);font-size:13px;font-weight:600}
+.screen .top img{width:22px;height:22px;border-radius:6px}
+.chat{flex:1;display:flex;flex-direction:column;justify-content:flex-end;gap:8px;padding:12px;font-size:12.5px;line-height:1.6}
+.b{max-width:82%;padding:8px 11px;border-radius:14px;opacity:0;transform:translateY(8px) scale(.98);transition:opacity .4s var(--ease),transform .4s var(--ease)}
+.b.in{opacity:1;transform:none}
+.b.u{align-self:flex-end;background:#F4F4F2;color:#111;border-end-end-radius:5px}
+.b.f{align-self:flex-start;background:#1c2224;color:#eee;border-end-start-radius:5px}
+.typing{align-self:flex-start;display:flex;gap:4px;padding:10px 12px;background:#1c2224;border-radius:14px;opacity:0;transition:opacity .2s}
+.typing.in{opacity:1}
+.typing i{width:5px;height:5px;border-radius:50%;background:#9aa;animation:dot 1s infinite}
+.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes dot{0%,80%,100%{opacity:.25}40%{opacity:1}}
+/* homes viz */
+.home-viz{margin-top:22px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.dev-chip{border:1px solid var(--line);border-radius:16px;padding:14px 10px;text-align:center;font-size:13px;color:var(--muted);transition:all .5s var(--ease)}
+.dev-chip svg{margin:0 auto 6px;width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:1.6}
+.dev-chip.on{color:var(--bg);background:var(--brass);border-color:var(--brass);box-shadow:0 10px 30px rgba(242,181,68,.25)}
+.wave{display:flex;align-items:center;justify-content:center;gap:3px;height:34px;margin-top:16px}
+.wave span{width:3px;border-radius:2px;background:var(--teal);height:6px;animation:wv 1.2s var(--ease) infinite}
+@keyframes wv{50%{height:30px}}
+/* agents viz */
+#graph{width:100%;height:190px;margin-top:14px}
+.why-list{display:grid;gap:12px;margin:0;padding:0;list-style:none}
+.why-list li b{display:block;font-weight:600;font-size:17px}
+.why-list li span{color:var(--muted);font-size:15px}
+
+/* principles */
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.pillar{border-radius:22px;border:1px solid var(--line);padding:30px;background:linear-gradient(180deg,rgba(255,255,255,.03),transparent)}
+.pillar .ic{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:rgba(25,201,182,.1);border:1px solid rgba(25,201,182,.25);margin-bottom:20px}
+.pillar .ic svg{width:22px;height:22px;stroke:var(--teal);fill:none;stroke-width:1.8}
+.pillar h3{font-weight:600;font-size:22px;margin:0 0 8px}
+.pillar p{margin:0;color:var(--muted)}
+@media (max-width:860px){.pillars{grid-template-columns:1fr}}
+
+/* company */
+.company{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start}
+.company p{color:var(--muted);font-size:18px;margin:0 0 16px;max-width:34em}
+.facts{border-radius:22px;border:1px solid var(--line);overflow:hidden}
+.facts div{display:flex;justify-content:space-between;gap:16px;padding:18px 22px;border-bottom:1px solid var(--line)}
+.facts div:last-child{border-bottom:0}
+.facts dt{color:var(--dim);font-size:15px}
+.facts dd{margin:0;font-weight:550;text-align:end}
+dl{margin:0}
+@media (max-width:860px){.company{grid-template-columns:1fr}}
+
+/* contact */
+.cta-band{position:relative;overflow:hidden;border-radius:30px;padding:clamp(36px,6vw,72px);text-align:center;border:1px solid rgba(25,201,182,.25);
+  background:radial-gradient(80% 120% at 50% 0%,rgba(25,201,182,.22),transparent 60%),radial-gradient(60% 80% at 100% 100%,rgba(242,181,68,.12),transparent 60%),var(--bg2)}
+.cta-band h2{margin-bottom:12px}
+.cta-band p{color:var(--muted);margin:0 auto 28px;max-width:32em}
+.mail{display:inline-flex;align-items:center;gap:6px;padding:6px;border-radius:16px;border:1px solid var(--line);background:rgba(0,0,0,.25)}
+.mail a{font-family:"Geist",sans-serif;font-size:18px;text-decoration:none;padding:6px 14px;direction:ltr}
+.mail button{font:inherit;font-size:14px;border:0;border-radius:11px;padding:9px 16px;background:var(--ink);color:var(--bg);cursor:pointer;transition:transform .16s var(--ease)}
+.mail button:active{transform:scale(.97)}
+
+footer{padding:40px 0 56px;color:var(--dim);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;border-top:1px solid var(--line);padding-top:26px}
+footer a{color:var(--muted);text-decoration:none}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .rv{opacity:1;transform:none}.b{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<header id="hdr">
+  <div class="wrap bar">
+    <a class="brand" href="/" aria-label="نابيكس">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#19C9B6"/><stop offset="1" stop-color="#7EF0E2"/></linearGradient></defs><rect width="64" height="64" rx="16" fill="#0A1316"/><path d="M14 30v3a18 18 0 0 0 36 0v-3" fill="none" stroke="url(#lg)" stroke-width="6.5" stroke-linecap="round"/><path d="M32 9 38 15 32 21 26 15Z" fill="#F2B544"/></svg>
+      <b>نابيكس</b>
+    </a>
+    <nav aria-label="القائمة">
+      <a href="#products">منتجاتنا</a>
+      <a href="#company">الشركة</a>
+      <a href="#contact">تواصل</a>
+      <a class="lang" href="/en/" hreflang="en" lang="en">English</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" aria-label="الواجهة">
+    <canvas id="field" aria-hidden="true"></canvas>
+    <div class="wrap hero-in">
+      <div class="eyebrow rv"><i></i>شركة تقنية سعودية من جدة</div>
+      <h1 class="rv">ذكاء اصطناعي<br><span class="glow">يتكلم بلهجتنا</span></h1>
+      <p class="lead rv">نابيكس تبني منتجات ذكاء اصطناعي تشيل عنك الشغل اليومي، للأفراد والمنشآت. جرّب تسأل مساعدنا الحين.</p>
+
+      <div class="ask rv" id="ask">
+        <div class="ask-in">
+          <div class="ask-log" id="log" aria-live="polite"></div>
+          <form class="ask-row" id="askf" autocomplete="off">
+            <span class="spark" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="#19C9B6"><path d="M12 2l1.9 6.1L20 10l-6.1 1.9L12 18l-1.9-6.1L4 10l6.1-1.9z"/></svg></span>
+            <input id="q" name="q" maxlength="400" placeholder="اسأل عن نابيكس أو فزعة…" aria-label="اكتب سؤالك">
+            <button class="send" id="send" type="submit" aria-label="إرسال" disabled><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          </form>
+          <div class="chips" id="chips">
+            <button type="button">وش هي نابيكس؟</button>
+            <button type="button">وش يسوي فزعة؟</button>
+            <button type="button">كم أسعار فزعة؟</button>
+            <button type="button">وش البيوت الذكية؟</button>
+          </div>
+          <p class="ask-note">مساعد ذكي، ممكن يغلط أحياناً. ما نحفظ أسئلتك.</p>
+        </div>
+      </div>
+    </div>
+    <span class="scroll-cue" aria-hidden="true"></span>
+  </section>
+
+  <section id="products">
+    <div class="wrap">
+      <p class="kicker rv">منتجاتنا</p>
+      <h2 class="rv">منتجات تشتغل عنك، مو بس تجاوبك</h2>
+      <p class="sub rv">كل منتج يبدأ من مشكلة نعيشها، ويكبر مع الناس اللي يستخدمونه.</p>
+
+      <div class="bento">
+        <article class="tile t-fazaa rv">
+          <div>
+            <span class="tag live">متاح الحين</span>
+            <div class="fz-head"><img src="/fazaa-mark.svg" alt="شعار فزعة" width="56" height="56"><h3 style="margin:0">فزعة</h3></div>
+            <p>مساعدك الذكي اللي يفزع لك. تكلمه بالكتابة أو بالصوت أو حتى بمكالمة، ويرتب لك يومك.</p>
+            <ul class="fz-list">
+              <li>يذكّرك بمواعيدك وأدويتك في وقتها</li>
+              <li>يبحث لك ويجاوب أسئلتك بالعربي</li>
+              <li>يرتبط بتقويمك ومهامك وتطبيقاتك</li>
+              <li>نسخ للأفراد والمشاريع الصغيرة والشركات</li>
+            </ul>
+            <a class="go" href="https://ifazaa.com" rel="noopener">جرّب فزعة</a>
+          </div>
+          <div class="phone" aria-hidden="true">
+            <div class="screen">
+              <div class="top"><img src="/fazaa-mark.svg" alt="">فزعة</div>
+              <div class="chat" id="demo"></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="tile t-homes rv">
+          <span class="tag dev">قيد التطوير</span>
+          <h3>البيوت الذكية</h3>
+          <p>قلها بصوتك، والبيت يتصرف.</p>
+          <div class="wave" aria-hidden="true"><span></span><span style="animation-delay:.1s"></span><span style="animation-delay:.2s"></span><span style="animation-delay:.3s"></span><span style="animation-delay:.4s"></span><span style="animation-delay:.5s"></span><span style="animation-delay:.6s"></span></div>
+          <div class="home-viz" id="home" aria-hidden="true">
+            <div class="dev-chip"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5V16h8v-2.5A6 6 0 0 0 12 3z"/></svg>الإضاءة</div>
+            <div class="dev-chip"><svg viewBox="0 0 24 24"><path d="M12 2v20M4.9 4.9l14.2 14.2M2 12h20M4.9 19.1 19.1 4.9"/></svg>المكيف</div>
+            <div class="dev-chip"><svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>الباب</div>
+          </div>
+        </article>
+
+        <article class="tile t-agents rv">
+          <span class="tag dev">قيد التطوير</span>
+          <h3>وكلاء للمنشآت</h3>
+          <p>فريق من الوكلاء الأذكياء يشتغل لشركتك على مدار الساعة.</p>
+          <canvas id="graph" aria-hidden="true"></canvas>
+        </article>
+
+        <article class="tile t-why rv">
+          <ul class="why-list">
+            <li><b>عربي من الأساس</b><span>يفهم اللهجة السعودية من أول كلمة.</span></li>
+            <li><b>خصوصيتك أولاً</b><span>ما نقرأ محادثاتك ولا نبيع بياناتك.</span></li>
+          </ul>
+        </article>
+
+        <article class="tile t-soon rv">
+          <div><h3 style="font-size:24px">والقادم أكبر</h3><p>نشتغل على منتجات جديدة، ونعلن عنها هنا أول ما تجهز.</p></div>
+          <a class="go ghost" href="#contact">تبي تتعاون معنا؟</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="how">
+    <div class="wrap">
+      <p class="kicker rv">كيف نشتغل</p>
+      <h2 id="how" class="rv">تقنية متقدمة، تجربة بسيطة</h2>
+      <p class="sub rv">نبني على أحدث نماذج الذكاء الاصطناعي، ونخفي التعقيد كله ورا تجربة سهلة.</p>
+      <div class="pillars">
+        <div class="pillar rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>الخصوصية قبل كل شي</h3><p>ما نقرأ محادثات أحد، ولا نبيع البيانات، ولا نستخدمها للإعلانات. وتقدر تحذف كل بياناتك بضغطة.</p></div>
+        <div class="pillar rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4z"/><path d="M8 10h8M8 13h5"/></svg></div><h3>يفهمك زي ما تتكلم</h3><p>عربي أولاً وبلهجتنا، بالكتابة أو بالصوت، والإنجليزي موجود لمن يحتاجه.</p></div>
+        <div class="pillar rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div><h3>سريع وبسيط</h3><p>خطوات قليلة، وأسعار واضحة بدون رسوم مخفية. تبدأ في دقيقة.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="company" aria-labelledby="co">
+    <div class="wrap company">
+      <div>
+        <p class="kicker rv">الشركة</p>
+        <h2 id="co" class="rv">نابيكس لتقنية المعلومات</h2>
+        <p class="rv">نابيكس مؤسسة سعودية مسجلة في جدة. نؤمن إن الذكاء الاصطناعي لازم يكون سهل، يتكلم لغتنا، ويخدم الناس في يومهم بدون تعقيد.</p>
+        <p class="rv">فزعة أول منتجاتنا، ووراه منتجات للبيوت والمنشآت.</p>
+      </div>
+      <dl class="facts rv">
+        <div><dt>الاسم الرسمي</dt><dd>مؤسسة نابيكس لتقنية المعلومات</dd></div>
+        <div><dt>الرقم الوطني الموحد</dt><dd class="num">7055611177</dd></div>
+        <div><dt>المقر</dt><dd>جدة، المملكة العربية السعودية</dd></div>
+        <div><dt>النشاط</dt><dd>تقنية المعلومات</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="cta-band rv">
+        <h2>خلنا نبني شي سوا</h2>
+        <p>للتعاون أو الاستفسار عن منتجاتنا، راسلنا على الإيميل.</p>
+        <div class="mail"><a href="mailto:info@ifazaa.com">info@ifazaa.com</a><button type="button" id="copy">نسخ</button></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span class="num">2026</span> مؤسسة نابيكس لتقنية المعلومات · الرقم الوطني الموحد <span class="num">7055611177</span></span>
+    <span><a href="https://ifazaa.com">فزعة</a> · جدة، المملكة العربية السعودية</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+var L={
+  api:"https://api.ifazaa.com/fz-app/api/nabix/ask",
+  busy:"المساعد مشغول شوي، جرّب بعد لحظات.",
+  rate:"وصلت الحد المسموح للأسئلة الحين، جرّب بعد شوي أو راسلنا على info@ifazaa.com.",
+  copied:"تم النسخ",
+  demo:[["u","ذكرني بموعد الأسنان بكرة الساعة 5"],["f","أبشر ✅ سجلته: موعد الأسنان بكرة الساعة 5:00 العصر، وأذكّرك قبلها بساعة."],["u","وش عندي هالأسبوع؟"],["f","عندك 3 مواعيد: الأسنان بكرة، اجتماع الفريق الثلاثاء، وعشاء عائلي الخميس."]]
+};
+var reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* header */
+var hdr=document.getElementById("hdr");
+addEventListener("scroll",function(){hdr.classList.toggle("scrolled",scrollY>20)},{passive:true});
+
+/* reveal */
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{rootMargin:"0px 0px -8% 0px"});
+document.querySelectorAll(".rv").forEach(function(el,i){el.style.transitionDelay=(el.closest(".hero")?i*90:0)+"ms";io.observe(el)});
+
+/* spotlight */
+document.querySelectorAll(".tile").forEach(function(t){t.addEventListener("pointermove",function(e){var r=t.getBoundingClientRect();t.style.setProperty("--mx",(e.clientX-r.left)+"px");t.style.setProperty("--my",(e.clientY-r.top)+"px")})});
+
+/* hero field: rawshan lattice that breathes and follows the pointer */
+var cv=document.getElementById("field"),cx=cv.getContext("2d"),W,H,dpr,pts=[],mx=-1e4,my=-1e4,t0=performance.now();
+function size(){dpr=Math.min(devicePixelRatio||1,2);W=cv.clientWidth;H=cv.clientHeight;cv.width=W*dpr;cv.height=H*dpr;cx.setTransform(dpr,0,0,dpr,0,0);
+  pts=[];var s=W<700?54:66;for(var y=-s;y<H+s;y+=s/2){var row=Math.round(y/(s/2));for(var x=-s+(row%2?s/2:0);x<W+s;x+=s){pts.push({x:x,y:y,p:Math.random()*6.28})}}}
+size();addEventListener("resize",size);
+cv.parentElement.addEventListener("pointermove",function(e){var r=cv.getBoundingClientRect();mx=e.clientX-r.left;my=e.clientY-r.top});
+cv.parentElement.addEventListener("pointerleave",function(){mx=my=-1e4});
+function draw(now){
+  var t=(now-t0)/1000;cx.clearRect(0,0,W,H);
+  var cxm=W/2,cym=H*.42;
+  for(var i=0;i<pts.length;i++){var p=pts[i];
+    var dx=p.x-mx,dy=p.y-my,d=Math.sqrt(dx*dx+dy*dy),near=Math.max(0,1-d/220);
+    var dc=Math.sqrt((p.x-cxm)*(p.x-cxm)+(p.y-cym)*(p.y-cym));
+    var wave=.5+.5*Math.sin(dc/90-t*1.3+p.p*.15);
+    var a=.10+wave*.22+near*.6,r=1.3+wave*1.5+near*2.6;
+    var sz=8+near*6;
+    cx.strokeStyle="rgba(25,201,182,"+(a*.7).toFixed(3)+")";cx.lineWidth=1;
+    cx.beginPath();cx.moveTo(p.x,p.y-sz);cx.lineTo(p.x+sz,p.y);cx.lineTo(p.x,p.y+sz);cx.lineTo(p.x-sz,p.y);cx.closePath();cx.stroke();
+    cx.fillStyle=near>.35?"rgba(242,181,68,"+(near*.9).toFixed(3)+")":"rgba(25,201,182,"+a.toFixed(3)+")";
+    cx.beginPath();cx.arc(p.x,p.y,r,0,6.283);cx.fill();
+  }
+  if(!reduce)requestAnimationFrame(draw);
+}
+requestAnimationFrame(draw);
+
+/* agents graph */
+var g=document.getElementById("graph"),gx=g.getContext("2d"),GW,GH,nodes=[],edges=[],pulses=[];
+function gsize(){var d=Math.min(devicePixelRatio||1,2);GW=g.clientWidth;GH=g.clientHeight;g.width=GW*d;g.height=GH*d;gx.setTransform(d,0,0,d,0,0);
+  nodes=[];var c={x:GW/2,y:GH/2,r:9,core:1};nodes.push(c);
+  for(var i=0;i<7;i++){var ang=i/7*6.283+.4,rad=Math.min(GW,GH)*.38*(i%2?.78:1);nodes.push({x:GW/2+Math.cos(ang)*rad*1.5,y:GH/2+Math.sin(ang)*rad,r:5})}
+  edges=[];for(var j=1;j<nodes.length;j++){edges.push([0,j]);if(j<nodes.length-1&&j%2)edges.push([j,j+1])}}
+gsize();addEventListener("resize",gsize);
+function gdraw(){gx.clearRect(0,0,GW,GH);
+  edges.forEach(function(e){var a=nodes[e[0]],b=nodes[e[1]];gx.strokeStyle="rgba(255,255,255,.10)";gx.lineWidth=1;gx.beginPath();gx.moveTo(a.x,a.y);gx.lineTo(b.x,b.y);gx.stroke()});
+  if(Math.random()<.06)pulses.push({e:edges[Math.floor(Math.random()*edges.length)],k:0,dir:Math.random()<.5});
+  pulses=pulses.filter(function(p){p.k+=.018;var a=nodes[p.e[p.dir?0:1]],b=nodes[p.e[p.dir?1:0]],x=a.x+(b.x-a.x)*p.k,y=a.y+(b.y-a.y)*p.k;
+    gx.fillStyle="rgba(25,201,182,.95)";gx.shadowColor="#19C9B6";gx.shadowBlur=12;gx.beginPath();gx.arc(x,y,2.6,0,6.283);gx.fill();gx.shadowBlur=0;return p.k<1});
+  nodes.forEach(function(n){gx.fillStyle=n.core?"#F2B544":"#0E7F74";gx.strokeStyle=n.core?"rgba(242,181,68,.4)":"rgba(25,201,182,.5)";gx.lineWidth=6;gx.beginPath();gx.arc(n.x,n.y,n.r,0,6.283);gx.stroke();gx.fill()});
+  if(!reduce)requestAnimationFrame(gdraw)}
+requestAnimationFrame(gdraw);
+
+/* homes */
+var chipsH=document.querySelectorAll("#home .dev-chip"),hi=0;
+if(!reduce)setInterval(function(){chipsH.forEach(function(c,i){c.classList.toggle("on",i===hi)});hi=(hi+1)%chipsH.length},1600);else chipsH[0].classList.add("on");
+
+/* fazaa phone demo */
+var demo=document.getElementById("demo");
+function runDemo(){demo.innerHTML="";var i=0;
+  (function next(){if(i>=L.demo.length){setTimeout(runDemo,3800);return}
+    var m=L.demo[i++];
+    if(m[0]==="f"){var ty=document.createElement("div");ty.className="typing";ty.innerHTML="<i></i><i></i><i></i>";demo.appendChild(ty);requestAnimationFrame(function(){ty.classList.add("in")});
+      setTimeout(function(){ty.remove();add(m);setTimeout(next,1500)},1100)}
+    else{add(m);setTimeout(next,900)}})()}
+function add(m){var b=document.createElement("div");b.className="b "+m[0];b.textContent=m[1];demo.appendChild(b);requestAnimationFrame(function(){requestAnimationFrame(function(){b.classList.add("in")})})}
+var dio=new IntersectionObserver(function(es){if(es[0].isIntersecting){runDemo();dio.disconnect()}});dio.observe(demo);
+
+/* ask nabix */
+var form=document.getElementById("askf"),q=document.getElementById("q"),send=document.getElementById("send"),log=document.getElementById("log"),hist=[],busy=false;
+q.addEventListener("input",function(){send.disabled=busy||!q.value.trim()});
+document.querySelectorAll("#chips button").forEach(function(b){b.addEventListener("click",function(){q.value=b.textContent;ask()})});
+form.addEventListener("submit",function(e){e.preventDefault();ask()});
+function bubble(cls,text){var d=document.createElement("div");d.className="msg "+cls;if(text)d.textContent=text;log.appendChild(d);log.scrollTop=log.scrollHeight;return d}
+function linkify(el,text){el.textContent="";var re=/(https?:\/\/[^\s)،,]+|info@ifazaa\.com)/g,last=0,m;
+  while((m=re.exec(text))){el.appendChild(document.createTextNode(text.slice(last,m.index)));var a=document.createElement("a");var u=m[0].replace(/[.!؟?]+$/,"");a.href=u.indexOf("@")>0?"mailto:"+u:u;a.textContent=u;a.rel="noopener";a.target="_blank";el.appendChild(a);last=m.index+u.length}
+  el.appendChild(document.createTextNode(text.slice(last)))}
+function type(el,text,done){if(reduce){linkify(el,text);done();return}var i=0,c=document.createElement("span");c.className="caret";
+  (function step(){i+=Math.max(1,Math.round(text.length/120));el.textContent=text.slice(0,i);el.appendChild(c);log.scrollTop=log.scrollHeight;
+    if(i<text.length)setTimeout(step,16);else{linkify(el,text);done()}})()}
+function ask(){var text=q.value.trim();if(!text||busy)return;busy=true;send.disabled=true;q.value="";
+  document.getElementById("chips").style.display="none";
+  bubble("me",text);var ai=bubble("ai","");ai.innerHTML='<span class="caret"></span>';
+  fetch(L.api,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({q:text,history:hist.slice(-10)})})
+   .then(function(r){return r.json().then(function(j){return{s:r.status,j:j}})})
+   .then(function(x){var rep=x.s===200&&x.j.reply?x.j.reply:(x.s===429?L.rate:L.busy);
+      if(x.s===200){hist.push({role:"user",text:text},{role:"assistant",text:rep})}
+      type(ai,rep,fin)})
+   .catch(function(){type(ai,L.busy,fin)});
+  function fin(){busy=false;send.disabled=!q.value.trim();q.focus({preventScroll:true})}}
+
+/* copy */
+var cp=document.getElementById("copy");cp.addEventListener("click",function(){var o=cp.textContent;if(navigator.clipboard)navigator.clipboard.writeText("info@ifazaa.com").then(function(){cp.textContent=L.copied;setTimeout(function(){cp.textContent=o},1600)},function(){})});
+})();
+</script>
+</body>
+</html>
