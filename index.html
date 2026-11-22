@@ -6,12 +6,28 @@
 <title>نابيكس لتقنية المعلومات</title>
 <meta name="description" content="نابيكس شركة تقنية سعودية من جدة تبني منتجات ذكاء اصطناعي تتكلم بلهجتنا. أول منتجاتنا فزعة.">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <link rel="alternate" hreflang="en" href="https://nabix.sa/en/">
 <link rel="alternate" hreflang="ar" href="https://nabix.sa/">
+<link rel="alternate" hreflang="x-default" href="https://nabix.sa/">
 <link rel="canonical" href="https://nabix.sa/">
 <meta property="og:title" content="نابيكس لتقنية المعلومات">
 <meta property="og:description" content="منتجات ذكاء اصطناعي تتكلم بلهجتنا. أولها فزعة.">
 <meta property="og:url" content="https://nabix.sa/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="نابيكس">
+<meta property="og:locale" content="ar_SA">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:image" content="https://nabix.sa/share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="نابيكس: ذكاء اصطناعي يتكلم بلهجتنا">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="نابيكس لتقنية المعلومات">
+<meta name="twitter:description" content="منتجات ذكاء اصطناعي تتكلم بلهجتنا. أولها فزعة.">
+<meta name="twitter:image" content="https://nabix.sa/share.jpg">
 <meta name="theme-color" content="#05090B">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -196,6 +212,7 @@ footer a{color:var(--muted);text-decoration:none}
   .rv{opacity:1;transform:none}.b{opacity:1;transform:none}
 }
 </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://nabix.sa/#org","name":"نابيكس","alternateName":["Nabix","Nabix Information Technology"],"legalName":"مؤسسة نابيكس لتقنية المعلومات","url":"https://nabix.sa/","logo":"https://nabix.sa/icon-512.png","image":"https://nabix.sa/share.jpg","email":"hala@nabix.sa","foundingLocation":"Jeddah, Saudi Arabia","address":{"@type":"PostalAddress","addressLocality":"Jeddah","addressCountry":"SA"},"identifier":{"@type":"PropertyValue","propertyID":"Unified National Number","value":"7055611177"},"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"hala@nabix.sa","availableLanguage":["ar","en"]},"brand":{"@type":"Brand","name":"فزعة","alternateName":"Fazaa","url":"https://ifazaa.com/"}},{"@type":"WebSite","@id":"https://nabix.sa/#site","url":"https://nabix.sa/","name":"نابيكس","alternateName":"Nabix","inLanguage":["ar","en"],"publisher":{"@id":"https://nabix.sa/#org"}}]}</script>
 </head>
 <body>
 <header id="hdr">
@@ -339,7 +356,7 @@ footer a{color:var(--muted);text-decoration:none}
       <div class="cta-band rv">
         <h2>خلنا نبني شي سوا</h2>
         <p>للتعاون أو الاستفسار عن منتجاتنا، راسلنا على الإيميل.</p>
-        <div class="mail"><a href="mailto:info@ifazaa.com">info@ifazaa.com</a><button type="button" id="copy">نسخ</button></div>
+        <div class="mail"><a href="mailto:hala@nabix.sa">hala@nabix.sa</a><button type="button" id="copy">نسخ</button></div>
       </div>
     </div>
   </section>
@@ -357,7 +374,7 @@ footer a{color:var(--muted);text-decoration:none}
 var L={
   api:"https://api.ifazaa.com/fz-app/api/nabix/ask",
   busy:"المساعد مشغول شوي، جرّب بعد لحظات.",
-  rate:"وصلت الحد المسموح للأسئلة الحين، جرّب بعد شوي أو راسلنا على info@ifazaa.com.",
+  rate:"وصلت الحد المسموح للأسئلة الحين، جرّب بعد شوي أو راسلنا على hala@nabix.sa.",
   copied:"تم النسخ",
   demo:[["u","ذكرني بموعد الأسنان بكرة الساعة 5"],["f","أبشر ✅ سجلته: موعد الأسنان بكرة الساعة 5:00 العصر، وأذكّرك قبلها بساعة."],["u","وش عندي هالأسبوع؟"],["f","عندك 3 مواعيد: الأسنان بكرة، اجتماع الفريق الثلاثاء، وعشاء عائلي الخميس."]]
 };
@@ -454,7 +471,7 @@ function ask(){var text=q.value.trim();if(!text||busy)return;busy=true;send.disa
   function fin(){busy=false;send.disabled=!q.value.trim();q.focus({preventScroll:true})}}
 
 /* copy */
-var cp=document.getElementById("copy");cp.addEventListener("click",function(){var o=cp.textContent;if(navigator.clipboard)navigator.clipboard.writeText("info@ifazaa.com").then(function(){cp.textContent=L.copied;setTimeout(function(){cp.textContent=o},1600)},function(){})});
+var cp=document.getElementById("copy");cp.addEventListener("click",function(){var o=cp.textContent;if(navigator.clipboard)navigator.clipboard.writeText("hala@nabix.sa").then(function(){cp.textContent=L.copied;setTimeout(function(){cp.textContent=o},1600)},function(){})});
 })();
 </script>
 </body>

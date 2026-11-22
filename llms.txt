@@ -1,0 +1,18 @@
+# Nabix (نابيكس)
+
+> Nabix Information Technology (مؤسسة نابيكس لتقنية المعلومات) is a Saudi technology establishment in Jeddah, Unified National Number 7055611177. It builds simple, Arabic-first AI products for people and businesses.
+
+## Products
+- [Fazaa (فزعة)](https://ifazaa.com/): Nabix's first product, live now. A personal AI assistant you talk to by text or voice, in Arabic or English: reminders for appointments, documents and medicine, answers, web search, and organizing your day. Plans: free, Prime 199.99 SAR a year, Elite 299.99 SAR a year (VAT included). English: https://ifazaa.com/en/
+- Smart homes: in development. Turning homes into smart homes controlled by voice.
+- AI agents: in development. Agents that work for businesses around the clock.
+
+## Privacy
+- Nabix never reads anyone's conversations, never sells data, and never uses it for ads.
+
+## Key pages
+- [Home (Arabic)](https://nabix.sa/)
+- [Home (English)](https://nabix.sa/en/)
+
+## Contact
+- hala@nabix.sa

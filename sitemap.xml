@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://nabix.sa/</loc><lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://nabix.sa/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nabix.sa/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nabix.sa/"/>
+  </url>
+  <url>
+    <loc>https://nabix.sa/en/</loc><lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://nabix.sa/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nabix.sa/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nabix.sa/"/>
+  </url>
+</urlset>

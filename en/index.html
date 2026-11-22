@@ -6,12 +6,28 @@
 <title>Nabix Information Technology</title>
 <meta name="description" content="Nabix is a Saudi technology company from Jeddah building AI products that speak our language. Our first product is Fazaa.">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <link rel="alternate" hreflang="en" href="https://nabix.sa/en/">
 <link rel="alternate" hreflang="ar" href="https://nabix.sa/">
+<link rel="alternate" hreflang="x-default" href="https://nabix.sa/">
 <link rel="canonical" href="https://nabix.sa/en/">
 <meta property="og:title" content="Nabix Information Technology">
 <meta property="og:description" content="AI products that speak our language, starting with Fazaa.">
 <meta property="og:url" content="https://nabix.sa/en/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nabix">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ar_SA">
+<meta property="og:image" content="https://nabix.sa/share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Nabix: AI that speaks our language">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nabix Information Technology">
+<meta name="twitter:description" content="AI products that speak our language, starting with Fazaa.">
+<meta name="twitter:image" content="https://nabix.sa/share.jpg">
 <meta name="theme-color" content="#05090B">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -196,6 +212,7 @@ footer a{color:var(--muted);text-decoration:none}
   .rv{opacity:1;transform:none}.b{opacity:1;transform:none}
 }
 </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://nabix.sa/#org","name":"نابيكس","alternateName":["Nabix","Nabix Information Technology"],"legalName":"مؤسسة نابيكس لتقنية المعلومات","url":"https://nabix.sa/","logo":"https://nabix.sa/icon-512.png","image":"https://nabix.sa/share.jpg","email":"hala@nabix.sa","foundingLocation":"Jeddah, Saudi Arabia","address":{"@type":"PostalAddress","addressLocality":"Jeddah","addressCountry":"SA"},"identifier":{"@type":"PropertyValue","propertyID":"Unified National Number","value":"7055611177"},"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"hala@nabix.sa","availableLanguage":["ar","en"]},"brand":{"@type":"Brand","name":"فزعة","alternateName":"Fazaa","url":"https://ifazaa.com/"}},{"@type":"WebSite","@id":"https://nabix.sa/#site","url":"https://nabix.sa/","name":"نابيكس","alternateName":"Nabix","inLanguage":["ar","en"],"publisher":{"@id":"https://nabix.sa/#org"}}]}</script>
 </head>
 <body>
 <header id="hdr">
@@ -339,7 +356,7 @@ footer a{color:var(--muted);text-decoration:none}
       <div class="cta-band rv">
         <h2>Let's build something together</h2>
         <p>For partnerships or questions about our products, email us.</p>
-        <div class="mail"><a href="mailto:info@ifazaa.com">info@ifazaa.com</a><button type="button" id="copy">Copy</button></div>
+        <div class="mail"><a href="mailto:hala@nabix.sa">hala@nabix.sa</a><button type="button" id="copy">Copy</button></div>
       </div>
     </div>
   </section>
@@ -357,7 +374,7 @@ footer a{color:var(--muted);text-decoration:none}
 var L={
   api:"https://api.ifazaa.com/fz-app/api/nabix/ask",
   busy:"The assistant is busy, please try again in a moment.",
-  rate:"You've reached the question limit for now. Try again later or email info@ifazaa.com.",
+  rate:"You've reached the question limit for now. Try again later or email hala@nabix.sa.",
   copied:"Copied",
   demo:[["u","Remind me about the dentist tomorrow at 5"],["f","Done ✅ Dentist tomorrow at 5:00 PM. I'll remind you an hour before."],["u","What's on this week?"],["f","3 things: the dentist tomorrow, team meeting on Tuesday, and family dinner on Thursday."]]
 };
@@ -454,7 +471,7 @@ function ask(){var text=q.value.trim();if(!text||busy)return;busy=true;send.disa
   function fin(){busy=false;send.disabled=!q.value.trim();q.focus({preventScroll:true})}}
 
 /* copy */
-var cp=document.getElementById("copy");cp.addEventListener("click",function(){var o=cp.textContent;if(navigator.clipboard)navigator.clipboard.writeText("info@ifazaa.com").then(function(){cp.textContent=L.copied;setTimeout(function(){cp.textContent=o},1600)},function(){})});
+var cp=document.getElementById("copy");cp.addEventListener("click",function(){var o=cp.textContent;if(navigator.clipboard)navigator.clipboard.writeText("hala@nabix.sa").then(function(){cp.textContent=L.copied;setTimeout(function(){cp.textContent=o},1600)},function(){})});
 })();
 </script>
 </body>
