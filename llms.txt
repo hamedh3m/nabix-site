@@ -11,8 +11,8 @@
 - Nabix never reads anyone's conversations, never sells data, and never uses it for ads.
 
 ## Key pages
-- [Home (Arabic)](https://nabix.sa/)
-- [Home (English)](https://nabix.sa/en/)
+- [Home (English)](https://nabix.sa/)
+- [Home (Arabic)](https://nabix.sa/ar/)
 
 ## Contact
 - hala@nabix.sa

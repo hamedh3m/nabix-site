@@ -1,8 +1,8 @@
 {
- "name": "نابيكس لتقنية المعلومات",
- "short_name": "نابيكس",
- "lang": "ar",
- "dir": "rtl",
+ "name": "Nabix Information Technology",
+ "short_name": "Nabix",
+ "lang": "en",
+ "dir": "ltr",
  "start_url": "/",
  "display": "browser",
  "background_color": "#05090B",

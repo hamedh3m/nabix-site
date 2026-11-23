@@ -1,33 +1,34 @@
 <!doctype html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8">
+<script>try{var l=localStorage.getItem("nx_lang");if(l==="ar"&&!/[?&]lang=en/.test(location.search))location.replace("/ar/"+location.hash)}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>نابيكس لتقنية المعلومات</title>
-<meta name="description" content="نابيكس شركة تقنية سعودية من جدة تبني منتجات ذكية لحياتك اليومية: فزعة، والبيت الذكي.">
+<title>Nabix Information Technology</title>
+<meta name="description" content="Nabix is a Saudi technology company from Jeddah building intelligent products for everyday life: Fazaa and smart home.">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 <script data-goatcounter="https://nabix.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
-<link rel="alternate" hreflang="en" href="https://nabix.sa/en/">
-<link rel="alternate" hreflang="ar" href="https://nabix.sa/">
+<link rel="alternate" hreflang="en" href="https://nabix.sa/">
+<link rel="alternate" hreflang="ar" href="https://nabix.sa/ar/">
 <link rel="alternate" hreflang="x-default" href="https://nabix.sa/">
 <link rel="canonical" href="https://nabix.sa/">
-<meta property="og:title" content="نابيكس لتقنية المعلومات">
-<meta property="og:description" content="نبني لك يوم أذكى: فزعة، والبيت الذكي.">
+<meta property="og:title" content="Nabix Information Technology">
+<meta property="og:description" content="Building the intelligent everyday: Fazaa and smart home.">
 <meta property="og:url" content="https://nabix.sa/">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="نابيكس">
-<meta property="og:locale" content="ar_SA">
-<meta property="og:locale:alternate" content="en_US">
+<meta property="og:site_name" content="Nabix">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ar_SA">
 <meta property="og:image" content="https://nabix.sa/share.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="نابيكس: نبني لك يوم أذكى">
+<meta property="og:image:alt" content="Nabix: Building the intelligent everyday">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="نابيكس لتقنية المعلومات">
-<meta name="twitter:description" content="نبني لك يوم أذكى: فزعة، والبيت الذكي.">
+<meta name="twitter:title" content="Nabix Information Technology">
+<meta name="twitter:description" content="Building the intelligent everyday: Fazaa and smart home.">
 <meta name="twitter:image" content="https://nabix.sa/share.jpg">
 <meta name="theme-color" content="#05090B">
 <meta name="msvalidate.01" content="47C0B2E9C974E07F2B6A61A3E5F255CD">
@@ -219,42 +220,42 @@ footer a{color:var(--muted);text-decoration:none}
 <body>
 <header id="hdr">
   <div class="wrap bar">
-    <a class="brand" href="/" aria-label="نابيكس">
+    <a class="brand" href="/" aria-label="Nabix">
       <svg viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#19C9B6"/><stop offset="1" stop-color="#F2B544"/></linearGradient></defs><path d="M32 6 58 32 32 58 6 32Z" fill="none" stroke="url(#lg)" stroke-width="4" stroke-linejoin="round"/><path d="M32 20 44 32 32 44 20 32Z" fill="url(#lg)"/></svg>
-      <b>نابيكس</b>
+      <b>Nabix</b>
     </a>
-    <nav aria-label="القائمة">
-      <a href="#products">منتجاتنا</a>
-      <a href="#company">الشركة</a>
-      <a href="#contact">تواصل</a>
-      <a class="lang" href="/en/" hreflang="en" lang="en">English</a>
+    <nav aria-label="Menu">
+      <a href="#products">Products</a>
+      <a href="#company">Company</a>
+      <a href="#contact">Contact</a>
+      <a class="lang" href="/ar/" hreflang="ar" lang="ar" onclick="try{localStorage.setItem('nx_lang','ar')}catch(e){}">عربي</a>
     </nav>
   </div>
 </header>
 
 <main>
-  <section class="hero" aria-label="الواجهة">
+  <section class="hero" aria-label="Intro">
     <canvas id="field" aria-hidden="true"></canvas>
     <div class="wrap hero-in">
-      <div class="eyebrow rv"><i></i>شركة تقنية سعودية من جدة</div>
-      <h1 class="rv">نبني لك<br><span class="glow">يوم أذكى</span></h1>
-      <p class="lead rv">نابيكس تبني منتجات ذكاء اصطناعي تشيل عنك الشغل اليومي، للأفراد والمنشآت. جرّب تسأل مساعدنا الحين.</p>
+      <div class="eyebrow rv"><i></i>A Saudi technology company from Jeddah</div>
+      <h1 class="rv">Building the<br><span class="glow">intelligent everyday</span></h1>
+      <p class="lead rv">Nabix builds AI products that take everyday work off your hands, for people and businesses. Try asking our assistant now.</p>
 
       <div class="ask rv" id="ask">
         <div class="ask-in">
           <div class="ask-log" id="log" aria-live="polite"></div>
           <form class="ask-row" id="askf" autocomplete="off">
             <span class="spark" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="#19C9B6"><path d="M12 2l1.9 6.1L20 10l-6.1 1.9L12 18l-1.9-6.1L4 10l6.1-1.9z"/></svg></span>
-            <input id="q" name="q" maxlength="400" placeholder="اسأل عن نابيكس أو فزعة…" aria-label="اكتب سؤالك">
-            <button class="send" id="send" type="submit" aria-label="إرسال" disabled><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+            <input id="q" name="q" maxlength="400" placeholder="Ask about Nabix or Fazaa…" aria-label="Type your question">
+            <button class="send" id="send" type="submit" aria-label="Send" disabled><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
           </form>
           <div class="chips" id="chips">
-            <button type="button">وش هي نابيكس؟</button>
-            <button type="button">وش يسوي فزعة؟</button>
-            <button type="button">كم أسعار فزعة؟</button>
-            <button type="button">وش البيوت الذكية؟</button>
+            <button type="button">What is Nabix?</button>
+            <button type="button">What does Fazaa do?</button>
+            <button type="button">How much is Fazaa?</button>
+            <button type="button">Tell me about smart homes</button>
           </div>
-          <p class="ask-note">مساعد ذكي، ممكن يغلط أحياناً. ما نحفظ أسئلتك.</p>
+          <p class="ask-note">AI assistant, it can make mistakes. We don't store your questions.</p>
         </div>
       </div>
     </div>
@@ -263,61 +264,61 @@ footer a{color:var(--muted);text-decoration:none}
 
   <section id="products">
     <div class="wrap">
-      <p class="kicker rv">منتجاتنا</p>
-      <h2 class="rv">منتجات تشتغل عنك، مو بس تجاوبك</h2>
-      <p class="sub rv">كل منتج يبدأ من مشكلة نعيشها، ويكبر مع الناس اللي يستخدمونه.</p>
+      <p class="kicker rv">Products</p>
+      <h2 class="rv">Products that get things done, not just answer</h2>
+      <p class="sub rv">Every product starts from a real problem and grows with the people who use it.</p>
 
       <div class="bento">
         <article class="tile t-fazaa rv">
           <div>
-            <span class="tag live">متاح الحين</span>
-            <div class="fz-head"><img src="/fazaa-mark.svg" alt="شعار فزعة" width="56" height="56"><h3 style="margin:0">فزعة</h3></div>
-            <p>مساعدك الذكي اللي يفزع لك. تكلمه بالكتابة أو بالصوت أو حتى بمكالمة، ويرتب لك يومك.</p>
+            <span class="tag live">Available now</span>
+            <div class="fz-head"><img src="/fazaa-mark.svg" alt="Fazaa logo" width="56" height="56"><h3 style="margin:0">Fazaa</h3></div>
+            <p>The AI assistant that has your back. Talk to it by text, voice or even a call, and it organizes your day.</p>
             <ul class="fz-list">
-              <li>يذكّرك بمواعيدك وأدويتك في وقتها</li>
-              <li>يبحث لك ويجاوب أسئلتك بالعربي</li>
-              <li>يرتبط بتقويمك ومهامك وتطبيقاتك</li>
-              <li>نسخ للأفراد والمشاريع الصغيرة والشركات</li>
+              <li>Reminds you of appointments and medicine on time</li>
+              <li>Searches and answers your questions in Arabic or English</li>
+              <li>Connects to your calendar, tasks and apps</li>
+              <li>Versions for individuals, small businesses and companies</li>
             </ul>
-            <a class="go" href="https://ifazaa.com" rel="noopener">جرّب فزعة</a>
+            <a class="go" href="https://ifazaa.com/en/" rel="noopener">Try Fazaa</a>
           </div>
           <div class="phone" aria-hidden="true">
             <div class="screen">
-              <div class="top"><img src="/fazaa-mark.svg" alt="">فزعة</div>
+              <div class="top"><img src="/fazaa-mark.svg" alt="">Fazaa</div>
               <div class="chat" id="demo"></div>
             </div>
           </div>
         </article>
 
         <article class="tile t-homes rv">
-          <span class="tag dev">قيد التطوير</span>
-          <h3>البيوت الذكية</h3>
-          <p>قلها بصوتك، والبيت يتصرف.</p>
+          <span class="tag dev">In development</span>
+          <h3>Smart homes</h3>
+          <p>Say it out loud, and your home acts.</p>
           <div class="wave" aria-hidden="true"><span></span><span style="animation-delay:.1s"></span><span style="animation-delay:.2s"></span><span style="animation-delay:.3s"></span><span style="animation-delay:.4s"></span><span style="animation-delay:.5s"></span><span style="animation-delay:.6s"></span></div>
           <div class="home-viz" id="home" aria-hidden="true">
-            <div class="dev-chip"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5V16h8v-2.5A6 6 0 0 0 12 3z"/></svg>الإضاءة</div>
-            <div class="dev-chip"><svg viewBox="0 0 24 24"><path d="M12 2v20M4.9 4.9l14.2 14.2M2 12h20M4.9 19.1 19.1 4.9"/></svg>المكيف</div>
-            <div class="dev-chip"><svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>الباب</div>
+            <div class="dev-chip"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5V16h8v-2.5A6 6 0 0 0 12 3z"/></svg>Lights</div>
+            <div class="dev-chip"><svg viewBox="0 0 24 24"><path d="M12 2v20M4.9 4.9l14.2 14.2M2 12h20M4.9 19.1 19.1 4.9"/></svg>AC</div>
+            <div class="dev-chip"><svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Door</div>
           </div>
         </article>
 
         <article class="tile t-agents rv">
-          <span class="tag dev">قيد التطوير</span>
-          <h3>وكلاء للمنشآت</h3>
-          <p>فريق من الوكلاء الأذكياء يشتغل لشركتك على مدار الساعة.</p>
+          <span class="tag dev">In development</span>
+          <h3>Agents for business</h3>
+          <p>A team of AI agents working for your business around the clock.</p>
           <canvas id="graph" aria-hidden="true"></canvas>
         </article>
 
         <article class="tile t-why rv">
           <ul class="why-list">
-            <li><b>عربي من الأساس</b><span>يفهم اللهجة السعودية من أول كلمة.</span></li>
-            <li><b>خصوصيتك أولاً</b><span>ما نقرأ محادثاتك ولا نبيع بياناتك.</span></li>
+            <li><b>Arabic-first</b><span>Understands the Saudi dialect from the first word.</span></li>
+            <li><b>Privacy first</b><span>We never read your chats or sell your data.</span></li>
           </ul>
         </article>
 
         <article class="tile t-soon rv">
-          <div><h3 style="font-size:24px">والقادم أكبر</h3><p>نشتغل على منتجات جديدة، ونعلن عنها هنا أول ما تجهز.</p></div>
-          <a class="go ghost" href="#contact">تبي تتعاون معنا؟</a>
+          <div><h3 style="font-size:24px">More is coming</h3><p>We are building new products and will announce them here when they are ready.</p></div>
+          <a class="go ghost" href="#contact">Want to work with us?</a>
         </article>
       </div>
     </div>
@@ -325,13 +326,13 @@ footer a{color:var(--muted);text-decoration:none}
 
   <section aria-labelledby="how">
     <div class="wrap">
-      <p class="kicker rv">كيف نشتغل</p>
-      <h2 id="how" class="rv">تقنية متقدمة، تجربة بسيطة</h2>
-      <p class="sub rv">نبني على أحدث نماذج الذكاء الاصطناعي، ونخفي التعقيد كله ورا تجربة سهلة.</p>
+      <p class="kicker rv">How we work</p>
+      <h2 id="how" class="rv">Advanced technology, simple experience</h2>
+      <p class="sub rv">We build on the latest AI models and hide all the complexity behind an easy experience.</p>
       <div class="pillars">
-        <div class="pillar rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>الخصوصية قبل كل شي</h3><p>ما نقرأ محادثات أحد، ولا نبيع البيانات، ولا نستخدمها للإعلانات. وتقدر تحذف كل بياناتك بضغطة.</p></div>
-        <div class="pillar rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4z"/><path d="M8 10h8M8 13h5"/></svg></div><h3>يفهمك زي ما تتكلم</h3><p>عربي أولاً وبلهجتنا، بالكتابة أو بالصوت، والإنجليزي موجود لمن يحتاجه.</p></div>
-        <div class="pillar rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div><h3>سريع وبسيط</h3><p>خطوات قليلة، وأسعار واضحة بدون رسوم مخفية. تبدأ في دقيقة.</p></div>
+        <div class="pillar rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Privacy above all</h3><p>We never read anyone's conversations, sell data or use it for ads. You can delete all your data in one tap.</p></div>
+        <div class="pillar rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4z"/><path d="M8 10h8M8 13h5"/></svg></div><h3>Understands you as you speak</h3><p>Arabic-first in our dialect, by text or voice, with English for those who need it.</p></div>
+        <div class="pillar rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div><h3>Fast and simple</h3><p>A few steps, clear prices, no hidden fees. Start in a minute.</p></div>
       </div>
     </div>
   </section>
@@ -339,16 +340,16 @@ footer a{color:var(--muted);text-decoration:none}
   <section id="company" aria-labelledby="co">
     <div class="wrap company">
       <div>
-        <p class="kicker rv">الشركة</p>
-        <h2 id="co" class="rv">نابيكس لتقنية المعلومات</h2>
-        <p class="rv">نابيكس مؤسسة سعودية مسجلة في جدة. نؤمن إن الذكاء الاصطناعي لازم يكون سهل، يتكلم لغتنا، ويخدم الناس في يومهم بدون تعقيد.</p>
-        <p class="rv">فزعة أول منتجاتنا، ووراه منتجات للبيوت والمنشآت.</p>
+        <p class="kicker rv">Company</p>
+        <h2 id="co" class="rv">Nabix Information Technology</h2>
+        <p class="rv">Nabix is a Saudi establishment registered in Jeddah. We believe AI should be easy, speak our language, and help people every day without complexity.</p>
+        <p class="rv">Fazaa is our first product, with more for homes and businesses to follow.</p>
       </div>
       <dl class="facts rv">
-        <div><dt>الاسم الرسمي</dt><dd>مؤسسة نابيكس لتقنية المعلومات</dd></div>
-        <div><dt>الرقم الوطني الموحد</dt><dd class="num">7055611177</dd></div>
-        <div><dt>المقر</dt><dd>جدة، المملكة العربية السعودية</dd></div>
-        <div><dt>النشاط</dt><dd>تقنية المعلومات</dd></div>
+        <div><dt>Legal name</dt><dd>Nabix Establishment for Information Technology</dd></div>
+        <div><dt>Unified National Number</dt><dd class="num">7055611177</dd></div>
+        <div><dt>Location</dt><dd>Jeddah, Saudi Arabia</dd></div>
+        <div><dt>Activity</dt><dd>Information technology</dd></div>
       </dl>
     </div>
   </section>
@@ -356,9 +357,9 @@ footer a{color:var(--muted);text-decoration:none}
   <section id="contact">
     <div class="wrap">
       <div class="cta-band rv">
-        <h2>خلنا نبني شي سوا</h2>
-        <p>للتعاون أو الاستفسار عن منتجاتنا، راسلنا على الإيميل.</p>
-        <div class="mail"><a href="mailto:hala@nabix.sa">hala@nabix.sa</a><button type="button" id="copy">نسخ</button></div>
+        <h2>Let's build something together</h2>
+        <p>For partnerships or questions about our products, email us.</p>
+        <div class="mail"><a href="mailto:hala@nabix.sa">hala@nabix.sa</a><button type="button" id="copy">Copy</button></div>
       </div>
     </div>
   </section>
@@ -366,8 +367,8 @@ footer a{color:var(--muted);text-decoration:none}
 
 <footer>
   <div class="wrap">
-    <span>© <span class="num">2026</span> مؤسسة نابيكس لتقنية المعلومات · الرقم الوطني الموحد <span class="num">7055611177</span></span>
-    <span>جدة، المملكة العربية السعودية</span>
+    <span>© <span class="num">2026</span> Nabix Establishment for Information Technology · Unified National Number <span class="num">7055611177</span></span>
+    <span>Jeddah, Saudi Arabia</span>
   </div>
 </footer>
 
@@ -375,10 +376,10 @@ footer a{color:var(--muted);text-decoration:none}
 (function(){
 var L={
   api:"https://api.ifazaa.com/fz-app/api/nabix/ask",
-  busy:"المساعد مشغول شوي، جرّب بعد لحظات.",
-  rate:"وصلت الحد المسموح للأسئلة الحين، جرّب بعد شوي أو راسلنا على hala@nabix.sa.",
-  copied:"تم النسخ",
-  demo:[["u","ذكرني بموعد الأسنان بكرة الساعة 5"],["f","أبشر ✅ سجلته: موعد الأسنان بكرة الساعة 5:00 العصر، وأذكّرك قبلها بساعة."],["u","وش عندي هالأسبوع؟"],["f","عندك 3 مواعيد: الأسنان بكرة، اجتماع الفريق الثلاثاء، وعشاء عائلي الخميس."]]
+  busy:"The assistant is busy, please try again in a moment.",
+  rate:"You've reached the question limit for now. Try again later or email hala@nabix.sa.",
+  copied:"Copied",
+  demo:[["u","Remind me about the dentist tomorrow at 5"],["f","Done ✅ Dentist tomorrow at 5:00 PM. I'll remind you an hour before."],["u","What's on this week?"],["f","3 things: the dentist tomorrow, team meeting on Tuesday, and family dinner on Thursday."]]
 };
 var reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
 
